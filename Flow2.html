@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build your portfolio - flow 2</title>
+
+    <link rel="icon" href="/billeder/logo.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- custom cursor -->
+    <div class="cursor out"></div>
+    <div class="cursor in"></div>
+
+    <script>
+        const cursor = document.querySelectorAll(".cursor");
+        const aTag = document.getElementsByTagName("a");
+        console.log(aTag);
+
+        window.addEventListener("mousemove", (i) => {
+
+            let x = i.pageX;
+            let y = i.pageY;
+
+            cursor.forEach(k => {
+                k.style.left = `${x}px`;
+                k.style.top = `${y}px`;
+
+
+                for (let index = 0; index < aTag.length; index++) {
+                    const element = aTag[index];
+                    element.addEventListener("mouseenter", () => {
+                        k.classList.add("hover");
+                        console.log("hover");
+                    })
+                    element.addEventListener("mouseleave", () => {
+                        k.classList.remove("hover");
+                    })
+                }
+
+            })
+        })
+    </script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container" id="navbar">
+            <div class="container-fluid">
+
+                <!-- skal være mit logo -->
+                <a class="navbar-brand dont-show" href="/index.html#navbar">Back to home</a>
+
+                <!-- næste projects -->
+                <a class="next dont-show" href="/Flow3.html">next</a>
+
+                <!-- Sidste projects -->
+                <a class="previous dont-show" href="/Flow1.html">previous</a>
+
+                <button class="navbar-toggler  ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navigationbar" id="navbarSupportedContent">
+
+
+                    <ul class="navbar-nav  ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="/index.html#projects">Projects</a>
+                        </li>
+                        <li class="nav-item nav-trans">
+                            <a class="nav-link text-black" href="/index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="/index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- content -->
+    <div class="container pt-5 ">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-sm-7">
+                    <h1 class="bold">Build your portfolio - flow 2</h1>
+
+                    <p>In this assignment we had to take out portfolio prototype and make it a reality. We were assigned
+                        to use HTML and CSS to produce our websites.
+                        <br>
+                        We had to:
+                    <ul>
+                        <li>Produce a online version of the portfolio on GitHub</li>
+                        <li>Have a repository for your portfolio project</li>
+                        <li>Have an appropriate project structure file names, folder, and so on.</li>
+                        <li>Make sure that the the code is error-free and validated</li>
+                    </ul>
+                    <p> Beside that, we also had to have some things in consideration
+                    </p>
+
+                    <ul>
+                        <li>Who is going to see my Portfolio</li>
+                        <li>How do I present myself the best way</li>
+                        <li>How do I communicate what I have learned so far and what I hope to learn in the future?</li>
+                        <li>What visual style and mood do I want on my portfolio?</li>
+                        <li>How can I give my portfolio a personal touch?</li>
+                    </ul>
+
+                    <h3 class="bold pt-2">What I did</h3>
+                    <p>
+                        First of I made sure to meet all the requirements. Then I thought of who was going to see my
+                        Portfolio at that point, which was our teachers and the other student, so I decided on writing
+                        it in Danish. I wanted to present myself in a creative way, with lots of effects, as I like
+                        going the dept with whatever I'm working on. I made a onepager(portfolio), so it was quick and
+                        easy to see my work and contact me. I also tried to give it my personal touch with the orange
+                        colour (my favourite) and the many effects, which became the theme and mood of the website.
+                    </p>
+
+                    
+                    <a href="http://old.nikolajkring.eu/">Link to old website
+                    </a>
+                    <br> <br>
+
+                    
+                    <a href="/index.html#contact">Contact
+                    </a>
+                </div>
+
+                <div class="col-sm-5">
+                    <img class="img-fluid py-4" src="/flow2/forside.PNG" alt="pond">
+                    <img class="img-fluid py-4" src="/flow2/Portfolioside.PNG" alt="pond">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container vh-100 d-flex align-items-center">
+        <div class="row pb-3">
+            <div class="col-sm-6">
+                <img class="img-fluid pb-2" src="/flow2/kontakt-side.PNG" alt="pond">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid pb-2" src="/flow2/om-mig-side.PNG" alt="pond">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
